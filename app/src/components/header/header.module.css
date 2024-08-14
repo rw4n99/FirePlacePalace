@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .header_image{
+    max-width: 100%;
+  }
+  .howItWorks {
+    max-width: 100%;
+  }
+  
+  .logo img {
+    width: 30px; /* the fireplace thingy aka Small logo size for mobile */
+    vertical-align: middle;
+  }
+  
+  .logo h1 {
+    display: inline;
+    font-size: 1.4em;
+    margin-left: 10px;
+    vertical-align: middle;
+  }

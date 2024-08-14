@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    max-width: 375px; 
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  

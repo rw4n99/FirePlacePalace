@@ -1,0 +1,132 @@
+/*notes for us */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 375px; 
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header_image{
+  max-width: 100%;
+}
+.howItWorks {
+  max-width: 100%;
+}
+
+.logo img {
+  width: 30px; /* the fireplace thingy aka Small logo size for mobile */
+  vertical-align: middle;
+}
+
+.logo h1 {
+  display: inline;
+  font-size: 1.4em;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #cd8125;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1em;
+}
+
+/* How it Works Section */
+.how-it-works {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.how-it-works h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.step {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.we-come-to-you img {
+  width: 100%; /* we haveee  too adjust image size and also the minmium so it stops shrinking */
+  margin-bottom: 10px;
+}
+
+.we-recommend h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  width: 100%;
+
+}
+
+.we-recommend img {
+
+  width: 100%;
+
+}
+
+.step p {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px; /* Adds space between the text elements */
+}
+
+footer .contact-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+footer .contact-info p:first-child {
+  font-weight: bold;
+}
+
+footer .contact-info p:last-child {
+  font-size: 0.8em;
+  color: #666;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
