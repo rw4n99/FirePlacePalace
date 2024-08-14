@@ -4,7 +4,7 @@ import Header from "./src/components/header/header.jsx"
 
 export default function Home() {
   return (
-    <h1>Home page</h1>
-    // <Header/>
+    //<h1>Home page</h1>
+    <Header/>
   );
 }

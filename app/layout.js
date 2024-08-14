@@ -1,6 +1,5 @@
 import { Aleo } from "next/font/google";
 import "./globals.css";
-import Header from "./app/src/components/header"
 const inter = Aleo({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,9 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Header/>
+        <header>dfghj</header>
         {children}
-        
+        <footer>sdfghj</footer>
         </body>
     </html>
   );
