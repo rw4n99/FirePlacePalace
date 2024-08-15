@@ -39,22 +39,6 @@ header {
   vertical-align: middle;
 }
 
-/* How it Works Section */
-.how-it-works {
-  text-align: center;
-  padding: 10px 0;
-}
-
-.how-it-works h3 {
-  font-size: 1.4em;
-  margin-bottom: 20px;
-}
-
-.step {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .we-come-to-you img {
   width: 100%; /* we haveee  too adjust image size and also the minmium so it stops shrinking */
   margin-bottom: 10px;

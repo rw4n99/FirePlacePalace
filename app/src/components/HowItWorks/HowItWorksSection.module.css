@@ -1,0 +1,14 @@
+.how-it-works {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .how-it-works h3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    margin-bottom: 30px;
+    text-align: center;
+  }
