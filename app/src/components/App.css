@@ -39,25 +39,6 @@ header {
   vertical-align: middle;
 }
 
-/* Hero Section */
-.hero {
-  background-color: #cd8125;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1em;
-}
-
 /* How it Works Section */
 .how-it-works {
   text-align: center;
