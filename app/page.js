@@ -2,6 +2,9 @@ import Image from "next/image";
 import "./page.css";
 import Hero from "./src/components/Hero/hero";
 import HeaderImagePage from "@/public/Image/HeaderImage/HeaderImage";
+// import HowItWorks from "@/public/Image/HowItWorks/HowItWorksImage";
+import HowItWorks from "@/public/Image/howitworks/howitworks";
+
 
 export default function Home() {
   return (
@@ -9,6 +12,8 @@ export default function Home() {
     <html lang="en">
     <HeaderImagePage/>      
     <Hero/>
+    <HowItWorks/>
+
 
     </html>
   );
