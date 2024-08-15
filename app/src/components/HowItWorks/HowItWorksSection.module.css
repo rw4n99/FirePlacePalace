@@ -4,11 +4,26 @@
   }
   
   .how-it-works h3 {
-    font-size: 1.4em;
+    font-size: 1.em;
     margin-bottom: 20px;
+    
   }
   
   .step {
     margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .call{
+    color: red;
+    text-align: center;
+
+  }
+
+  .text{
+    text-align: center;
+  }
+
+  .HowItWorks{
     text-align: center;
   }

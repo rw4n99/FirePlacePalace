@@ -5,10 +5,13 @@ import styles from './HowItWorksSection.module.css'; // Import your CSS module f
 
 function HowItWorksSection () {
   return(
-  <section className="how-it-works">
-            <div class="step">
-                <h4>Give us a call ...</h4>
-                <p>Call us and book in a "Design Consultation" on a date and time to suit you.</p>
+  <section className={styles.howitworks}>
+            <div className="step">
+            <h2 className={styles.HowItWorks}>How It Works</h2>
+                <h4 className={styles.call}>
+                Give us a call ...</h4>
+                <p className={styles.text}>
+                  Call us and book in a "Design Consultation" on a date and time to suit you.</p>
             </div>
 </section>
 )}
