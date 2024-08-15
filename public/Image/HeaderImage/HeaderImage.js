@@ -15,8 +15,8 @@ function HeaderImagePage() {
     return (
         <Image
         src={Image1}
-        width={500}
-        height={500}
+        width={375}
+        height={375}
         alt="Picture of the author"
       />
     );

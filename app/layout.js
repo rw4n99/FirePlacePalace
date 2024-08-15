@@ -1,6 +1,6 @@
 import { Aleo } from "next/font/google";
 import Header from "./src/components/header/header";
-import "./globals.css";
+import "./globals.css";  // Import global CSS directly, no need to assign it to a variable
 
 const aleo = Aleo({ subsets: ["latin"] });
 
@@ -17,11 +17,13 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body className={aleo.className}>
-        <Header />
-        <main>{children}</main>
-        <footer>
-          {/* Replace with actual footer content */}
-        </footer>
+        <div className="wrapper">  {/* Use "wrapper" as a string for className */}
+          <Header />
+          <main>{children}</main>
+          <footer>
+            {/* Replace with actual footer content */}
+          </footer>
+        </div>
       </body>
     </html>
   );
