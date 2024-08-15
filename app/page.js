@@ -9,6 +9,8 @@ import HowItWorksSection from "./src/components/HowItWorks/how-it-works";
 import WeComeToYou from "./src/components/WeComeToYou/WeComeToYou";
 import WeCome from "@/public/Image/WeCome/WeCome";
 
+import Recommend from "@/public/Image/Recommend/Recommend";
+import RecommendScr from "./src/components/RecommendScr/RecommendScr";
 
 import { Aleo } from "next/font/google";
 const aleo = Aleo({ subsets: ["latin"] });
@@ -22,6 +24,8 @@ export default function Home() {
       <HowItWorksSection />
       <WeCome/>
       <WeComeToYou/>
+      <Recommend/>
+      <RecommendScr/>
     </div>
   );
 }

@@ -5,10 +5,10 @@ import React from 'react'; // Import React to use JSX
 
 function WeComeToYou () {
   return(
-<div class="we-come-to-you">
-                <h4>We come to you ...</h4>
-                <p>We come to your home to do an assessment of the space and to your style preference.</p>
-            </div>
+    <div className="we-come-to-you">
+      <h4>We come to you ...</h4>
+        <p>We come to your home to do an assessment of the space and to your style preference.</p>
+    </div>
 )
 }
 

@@ -2,6 +2,8 @@ import { Aleo } from "next/font/google";
 import Header from "./src/components/header/header";
 import "./globals.css";  // Import global CSS directly, no need to assign it to a variable
 
+import Footer from "./src/components/Footer/Footer";
+
 const aleo = Aleo({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,9 +22,7 @@ export default function RootLayout({ children }) {
         <div className="wrapper">  {/* Use "wrapper" as a string for className */}
           <Header />
           <main>{children}</main>
-          <footer>
-            {/* Replace with actual footer content */}
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
