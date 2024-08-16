@@ -15,18 +15,23 @@ export default function Header() {
 
 
 
-
   return (
     <header>
       <button onClick={handleClick}>
-        {menu ? "close the menu" : "open the menu"}
-
+        {menu ? "Close the menu" : "Open the menu"}
       </button>
+      {menu && ( 
+        <div className={styles.menu}>
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/founders">Founders</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+            {/* Add more links as needed */}
+          </ul>
+        </div>
+      )}
       <div className="logo">
         <h1 className={styles.header}>🔥Fireplace Palace</h1>
-        <ul>
-        <li><Link onClick={handleClick} href="/">Home</Link></li>
-        </ul>
       </div>
     </header>
   );
