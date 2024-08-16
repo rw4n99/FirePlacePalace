@@ -3,8 +3,8 @@ import style from "./Footer.module.css"
 
 function Footer(){
 return(
-<footer class={style.footer}>
-            <div class={"contact-info"}>
+<footer className={style.footer}>
+            <div className={"contact-info"}>
                 <p>Find us on:</p>
                 <p>Facebook | Instagram | Tiktok</p>
                 <p>&copy; 🔥Fireplace Palace</p>

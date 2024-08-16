@@ -21,9 +21,8 @@ export default function Header() {
       {menu && ( 
         <div className={styles.menu}>
           <ul>
-            <button><Link href="/">Home</Link></button>
-            <li><Link href="/founders">Founders</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
+            <li className={styles.button}><Link href="/">Home</Link></li>
+            <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
             {/* Add more links as needed */}
           </ul>
         </div>
