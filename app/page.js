@@ -11,9 +11,12 @@ import WeCome from "@/public/Image/WeCome/WeCome";
 
 import Recommend from "@/public/Image/Recommend/Recommend";
 import RecommendScr from "./src/components/RecommendScr/RecommendScr";
-import Link from "next/Link";
+
+import Reviews from "./src/components/reviews/reviews";
 
 import { Aleo } from "next/font/google";
+import Link from 'next/link'; // Import the Link component
+
 const aleo = Aleo({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,6 +25,7 @@ export default function Home() {
       <Link href="founders">This is the founders page</Link>
       <HeaderImagePage />
       <Hero />
+      <Reviews/>
       <HowItWorksImage />
       <HowItWorksSection />
       <WeCome/>

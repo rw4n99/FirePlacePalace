@@ -1,73 +1,22 @@
-.reviewsContainer {
-    padding: 20px;
-    background-color: #f8f8f8;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  .countryButton {
-    background-color: #e0e0e0;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .countryButton:hover {
-    background-color: #d4d4d4;
-  }
-  
-  .selectedCountry {
-    background-color: #cd8125;
-    color: white;
-  }
-  
-  .reviewText {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #555;
-  }
-  
-  .reviewAuthor {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-
-  .reviewContainer {
-    padding: 20px; /* Adjust padding as necessary */
-}
 
 .countryButtons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px; /* Add space below the buttons */
 }
-
 .countryButton {
-    background-color: grey;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: grey;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
 .countryButton:hover {
-    background-color: darkgrey;
+  background-color: darkgrey;
 }
-
 .selectedCountry {
-    background-color: #cd8125; /* Orange color when selected */
-    color: white;
-}
-
-.reviewDisplay {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #333;
+  background-color: #CD8125; /* Orange color when selected */
+  color: white;
 }

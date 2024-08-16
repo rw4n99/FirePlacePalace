@@ -13,8 +13,6 @@ export default function Header() {
     console.log(menu)
   }
 
-
-
   return (
     <header>
       <button onClick={handleClick}>
@@ -23,7 +21,7 @@ export default function Header() {
       {menu && ( 
         <div className={styles.menu}>
           <ul>
-            <li><Link href="/">Home</Link></li>
+            <button><Link href="/">Home</Link></button>
             <li><Link href="/founders">Founders</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
             {/* Add more links as needed */}
