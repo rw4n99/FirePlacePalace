@@ -35,7 +35,7 @@ export default function ContactForm() {
             <input type='text'/>
             </div>
         </fieldset>
-        <button type="submit"></button>
+        <button type="submit" className="submit-button">Submit</button>
     </form>
 
     )
