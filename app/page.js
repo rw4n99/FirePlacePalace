@@ -22,7 +22,6 @@ const aleo = Aleo({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className={aleo.className}>
-      <Link href="founders">This is the founders page</Link>
       <HeaderImagePage />
       <Hero />
       <Reviews/>

@@ -12,21 +12,3 @@ export default function Contact() {
         
     ) 
 }
-   // const [menu, setMenu] = useState(false)
-
-//    export default function Home() {
-//     return (
-//       <div className={aleo.className}>
-//         <Link href="founders">This is the founders page</Link>
-//         <HeaderImagePage />
-//         <Hero />
-//         <Reviews/>
-//         <HowItWorksImage />
-//         <HowItWorksSection />
-//         <WeCome/>
-//         <WeComeToYou/>
-//         <Recommend/>
-//         <RecommendScr/>
-//       </div>
-//     );
-//   }
