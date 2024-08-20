@@ -10,8 +10,8 @@ export default function ContactForm() {
   const [city, setCity] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [Email, setEmail] = useState("");
-  const [error, setError] = useState(false)
-
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 //   function handleChange(event) {
 //     if (event.target.name === "name") {
 //       setName(event.target.value);
@@ -56,6 +56,7 @@ console.log(event.target)
     }
     if (name || postcode || streetName || city || phoneNumber || Email)
         console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, Email });
+        setSuccess(true)
         return;
   }
   return(
@@ -70,6 +71,7 @@ console.log(event.target)
             <input name="Email" value={Email} onChange={handleChange} placeholder="Email" />
     <button type="submit">Submit</button>
     <p>{error && "Please complete all required fields"}</p>
+    <p1>{success && "Success! Your form has been submitted"}</p1>
   </form>
   )
 }
