@@ -56,6 +56,7 @@ Console log variable
 - Create contact us form
   - Personal info fieldset
   - Contact info fieldset
+  
 - Create state to track the first input field
 - Create onChange handler for the first input field
   - console log the field value
