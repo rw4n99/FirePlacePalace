@@ -53,14 +53,14 @@ Console log variable
 - Create contact us folder ✔
 - Create page.js in the folder ✔
 - Replace phone number with a Button link to contact us page ✔
-- Create contact us form
-  - Personal info fieldset
-  - Contact info fieldset
+- Create contact us form✔
+  - Personal info fieldset✔
+  - Contact info fieldset✔
   
-- Create state to track the first input field
+- Create state to track the first input field ✔
 - Create onChange handler for the first input field
   - console log the field value
-- Create state for the rest of the fields
+- Create state for the rest of the fields✔
 - Create handler for the rest the field
 - Check that no form fields are empty on submit
   - Show error if empty field
