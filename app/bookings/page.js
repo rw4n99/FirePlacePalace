@@ -9,6 +9,7 @@ export default function Contact() {
             <h1 className="Title">Design Bookings</h1>  
             <ContactForm/>
         </div>
+        
     ) 
 }
    // const [menu, setMenu] = useState(false)
