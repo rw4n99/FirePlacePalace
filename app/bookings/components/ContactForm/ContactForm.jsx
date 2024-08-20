@@ -17,21 +17,14 @@ export default function ContactForm() {
   }
   console.log(name);
 
-  return;
+  return(
 
   <form>
     <fieldset>
       <legend>Personal information</legend>
       <div className="name">
         <label for="name">Full Name: </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          minlength="4"
-          maxlength="8"
-          size="10"
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"
         />
       </div>
       <div className="postcode">
@@ -61,5 +54,6 @@ export default function ContactForm() {
     <button type="submit" className="submit-button">
       Request Design Consultation
     </button>
-  </form>;
+  </form>
+  )
 }
