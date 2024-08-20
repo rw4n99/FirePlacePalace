@@ -7,7 +7,7 @@ function Hero() {
     <header className={styles.heroheader}>
       <section className={styles.hero}>
         <h1>Discover the Perfect Fireplace for Your Home</h1>
-        <p>Book a Consultation: <a href="tel:+01213456789">0121 345 6789</a></p>
+        <p>Book a Consultation: <a href="/bookings">Fill in this form 📝 </a></p>
         {/* <button onClick={() => alert('Booking consultation...')}>Book Now</button> */}
       </section>
     </header>

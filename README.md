@@ -34,3 +34,33 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+Plan for bookings
+
+Create new page ✔
+Add basic jsx and css ✔
+Link new page to menu ✔
+
+Make a new component called "ContactForm" ✔
+import it into the new page. ✔
+create form element 
+Get the whole form looking how it should first (JSX and CSS)
+
+Create state variable
+Console log variable
+
+- Create contact us folder ✔
+- Create page.js in the folder ✔
+- Replace phone number with a Button link to contact us page ✔
+- Create contact us form
+  - Personal info fieldset
+  - Contact info fieldset
+- Create state to track the first input field
+- Create onChange handler for the first input field
+  - console log the field value
+- Create state for the rest of the fields
+- Create handler for the rest the field
+- Check that no form fields are empty on submit
+  - Show error if empty field
+- Console.log all the form data

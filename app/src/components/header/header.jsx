@@ -23,6 +23,7 @@ export default function Header() {
           <ul>
             <li className={styles.button}><Link href="/">Home</Link></li>
             <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
+            <li className={styles.button}><Link href="/bookings">Bookings</Link></li>
             {/* Add more links as needed */}
           </ul>
         </div>
