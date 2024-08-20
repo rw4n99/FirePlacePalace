@@ -12,11 +12,6 @@ export default function ContactForm() {
   const [Email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-//   function handleChange(event) {
-//     if (event.target.name === "name") {
-//       setName(event.target.value);
-//     }
-//   }
 
 function handleChange(event) {
     const { name, value } = event.target;
@@ -44,34 +39,33 @@ console.log(event.target)
         break;
     }
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     if (!name || !postcode || !streetName || !city || !phoneNumber || !Email){
         setError(true);
-        return;
-    }
-    if (error){
-        setError(false)
+        setSuccess(false)
         return;
     }
     if (name || postcode || streetName || city || phoneNumber || Email)
         console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, Email });
-        setSuccess(true)
+        setError(false);
+        setSuccess(true);
         return;
   }
   return(
     <form onSubmit={handleSubmit}>
         <legend className={styles.legend}>Personal information</legend>
-            <input name='name' value={name} onChange={handleChange} placeholder="Name" />
-            <input name="postcode" value={postcode} onChange={handleChange} placeholder="Postcode" />
-            <input name="streetName" value={streetName} onChange={handleChange} placeholder="Street Name" />
-            <input name="city" value={city} onChange={handleChange} placeholder="City" />
+            <input className={styles.text} name='name' value={name} onChange={handleChange} placeholder="Name" />
+            <input className={styles.text} name="postcode" value={postcode} onChange={handleChange} placeholder="Postcode" />
+            <input className={styles.text} name="streetName" value={streetName} onChange={handleChange} placeholder="Street Name" />
+            <input className={styles.text} name="city" value={city} onChange={handleChange} placeholder="City" />
         <legend className={styles.legend}>Contact Information</legend>
-            <input name="phoneNumber" value={phoneNumber} onChange={handleChange} placeholder="Phone Number" />
-            <input name="Email" value={Email} onChange={handleChange} placeholder="Email" />
-    <button type="submit">Submit</button>
-    <p>{error && "Please complete all required fields"}</p>
-    <p1>{success && "Success! Your form has been submitted"}</p1>
+            <input className={styles.text} name="phoneNumber" value={phoneNumber} onChange={handleChange} placeholder="Phone Number" />
+            <input className={styles.text} name="Email" value={Email} onChange={handleChange} placeholder="Email" />
+    <button className={styles.button}type="submit">Request Design Consultation</button>
+    <p className={styles.error}>{error && "Please complete all required fields"}</p>
+    <p className={styles.success}>{success && "Success! Your form has been submitted"}</p>
   </form>
   )
 }

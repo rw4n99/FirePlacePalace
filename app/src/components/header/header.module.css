@@ -24,8 +24,9 @@
   }
 
   .menu {
-    background-color: rgb(207, 142, 36);
+    background-color: #cb7316;
     height: 100%;
+    width: 100%;
   }
 
   .button {

@@ -1,3 +1,33 @@
-.legend{
-    color: aqua;
+/*Set the colour for error and success messages*/
+.error {
+    color: rgb(194, 53, 53);
+}
+
+.success {
+    color: rgb(23, 132, 61);
+}
+
+/*Form styling*/
+.legend {
+    padding: 30px;
+}
+
+.text {
+    background-color: white;
+    border-color: rgb(217, 215, 215);
+    outline: none;
+    padding: 30px;
+    width: 75%;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #cb7316; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
