@@ -65,3 +65,21 @@ Console log variable
 - Check that no form fields are empty on submit
   - Show error if empty field
 - Console.log all the form data
+
+- Clear out all the form fields apart from one
+- Removing the state
+- Removing the logic in the onChange handler
+- Remove the HTML
+> Check out work
+＜
+- Submitted correctly
+- Submitted an error
+- Create an initial state object that mimicks the state we have
+- Create a reducer function
+- Connect those two things to useReducer
+> Check our work
+- Remove fullName state
+- Remove setFullName state
+- Remove references to fullName State
+- Add references to state.data. fullName
+> Check our work

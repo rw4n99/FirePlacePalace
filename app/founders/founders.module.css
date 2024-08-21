@@ -3,6 +3,8 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    border-radius: 8px;
+  background-color: rgb(126, 127, 189);
   }
   .header {
     text-align: center;

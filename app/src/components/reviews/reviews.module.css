@@ -17,6 +17,7 @@
   background-color: darkgrey;
 }
 .selectedCountry {
-  background-color: #CD8125; /* Orange color when selected */
+  border-radius: 8px;
+  background-color: rgb(126, 127, 189); /* Orange color when selected */
   color: white;
 }
