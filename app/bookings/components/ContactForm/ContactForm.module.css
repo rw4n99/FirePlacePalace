@@ -14,7 +14,8 @@
 
 .text {
     background-color: white;
-    border-color: rgb(217, 215, 215);
+    border-color: white;
+    box-shadow: none;
     outline: none;
     padding: 30px;
     width: 75%;
