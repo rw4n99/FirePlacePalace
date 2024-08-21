@@ -66,6 +66,8 @@ Console log variable
   - Show error if empty field
 - Console.log all the form data
 
+
+🍄
 - Clear out all the form fields apart from one
 - Removing the state
 - Removing the logic in the onChange handler
