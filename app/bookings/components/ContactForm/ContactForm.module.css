@@ -23,7 +23,8 @@
 }
 
 .button {
-    background-color: #cb7316; 
+    border-radius: 8px;
+    background-color: rgb(126, 127, 189);
     border: none;
     color: white;
     padding: 15px 32px;

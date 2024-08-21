@@ -15,7 +15,8 @@
     font-size: 32px;
     color: #333; 
     margin-bottom: 20px;
-    background-color: #cb7316;
+    border-radius: 8px;
+  background-color: rgb(126, 127, 189);
 }
 
 .personalInformation, .contactInformation {

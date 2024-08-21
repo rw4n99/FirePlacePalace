@@ -1,5 +1,5 @@
 .hero {
-    background-color: #cd8125;
+  background-color: rgb(126, 127, 189);
     color: white;
     text-align: center;
     padding: 20px;
@@ -15,4 +15,8 @@
   .hero p {
     font-size: 1em;
   }
+  
+
+
+  
   
