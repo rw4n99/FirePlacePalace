@@ -1,11 +1,15 @@
 import React from 'react'; // Import React to use JSX
+import HowItWorksImages from '@/public/Image/howitworks/howitworks';
 
 function RecommendScr () {
   return(
-    <div className="we-recommend">
-    <h4>We recommend ...</h4>
-    <p>We send you a bespoke set of fireplace recommendations.</p>
-    </div>
+    <>
+      <HowItWorksImages src='/Image4.png' alt='Recommend'/>
+      <div className="we-recommend">
+      <h4>We recommend ...</h4>
+      <p>We send you a bespoke set of fireplace recommendations.</p>
+      </div>
+    </>
 )
 }
 

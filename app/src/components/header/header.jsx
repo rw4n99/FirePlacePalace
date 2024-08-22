@@ -14,9 +14,8 @@ export default function Header() {
   }
 
   return (
-    <section className="container">
-    <header>
-      <button onClick={handleClick}>
+    <header className={styles.container}>
+      <button className={styles.menuButton} onClick={handleClick}>
         {menu ? "Close the menu" : "Open the menu"}
       </button>
       {menu && ( 
@@ -29,11 +28,7 @@ export default function Header() {
           </ul>
         </div>
       )}
-      <div className="logo">
-        <h1 className={styles.header}>🔥Fireplace Palace</h1>
-      </div>
     </header>
-    </section>
   );
 }
 

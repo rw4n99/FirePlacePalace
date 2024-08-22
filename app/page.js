@@ -3,13 +3,12 @@ import "./globals.css"
 import Hero from "./src/components/Hero/hero";
 import HeaderImagePage from "@/public/Image/HeaderImage/HeaderImage";
 // import HowItWorks from "@/public/Image/HowItWorks/HowItWorksImage";
-import HowItWorksImage from "@/public/Image/howitworks/howitworks";
+import HowItWorksImages from "@/public/Image/howitworks/howitworks";
+
 import HowItWorksSection from "./src/components/HowItWorks/how-it-works";
 
 import WeComeToYou from "./src/components/WeComeToYou/WeComeToYou";
-import WeCome from "@/public/Image/WeCome/WeCome";
 
-import Recommend from "@/public/Image/Recommend/Recommend";
 import RecommendScr from "./src/components/RecommendScr/RecommendScr";
 
 import Reviews from "./src/components/reviews/reviews";
@@ -20,16 +19,15 @@ import Link from 'next/link'; // Import the Link component
 const aleo = Aleo({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
+  return ( 
     <div className={aleo.className}>
       <HeaderImagePage />
       <Hero />
       <Reviews/>
-      <HowItWorksImage />
+      <HowItWorksImages src='/how-it-works-1.png' alt='How it works image' text='Rowan'/>
       <HowItWorksSection />
-      <WeCome/>
+      <HowItWorksImages src='/Image3.png' alt='We come to you Image' text='We come to you ...' bodyText="sdlkhalv"/>
       <WeComeToYou/>
-      <Recommend/>
       <RecommendScr/>
     </div>
   );

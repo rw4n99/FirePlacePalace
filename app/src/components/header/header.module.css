@@ -1,14 +1,15 @@
 .container {
+  display: flex;
   background-color: blue;
 }
 
-.header {
-    text-align: center;
-    padding: 10px 0;
-  }
+.menuButton {
+  background-color: #ffc0cb;
   
-  .header_image{
-    max-width: 100%;
+}
+
+.header {
+    grid-column:1;
   }
   
   .howItWorks {
@@ -32,6 +33,7 @@
   background-color: rgb(126, 127, 189);
     height: 100%;
     width: 100%;
+    position: absolute;
   }
 
   .button {
