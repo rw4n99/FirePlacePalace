@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import styles from './header.module.css'; // Custom CSS for styling the header
+import styles from './header.module.css';
 import {useState} from "react"
 import Link from 'next/link';
 
@@ -15,6 +15,7 @@ export default function Header() {
 
   return (
     <header className={styles.container}>
+      <h1 className={styles.header}>🔥 Fireplace Palace</h1>
       <button className={styles.menuButton} onClick={handleClick}>
         {menu ? "Close the menu" : "Open the menu"}
       </button>

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* This makes sure your container takes at least the full height of the viewport */
-    text-align: center; /* This centers the text inside the container */
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
   }

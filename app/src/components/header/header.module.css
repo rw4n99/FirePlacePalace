@@ -5,48 +5,41 @@
 
 .menuButton {
   background-color: #ffc0cb;
-  
+
 }
 
 .header {
-    grid-column:1;
-  }
-  
-  .howItWorks {
-    max-width: 100%;
-  }
-  
-  .logo img {
-    width: 30px; /* the fireplace thingy aka Small logo size for mobile */
-    vertical-align: middle;
-  }
-  
-  .logo h1 {
-    display: inline;
-    font-size: 1.4em;
-    margin-left: 10px;
-    vertical-align: middle;
-  }
+  font-size: 170%;
+}
 
-  .menu {
-    border-radius: 8px;
-  background-color: rgb(126, 127, 189);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
+.menu {
+  border-radius: 8px;
+  background-color: rgb(242, 142, 50);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
-  .button {
-    display: flex;
-      background-color: #8853ab; 
-      padding: 15px 32px; /* Larger padding for a bigger button */
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px; 
-      margin: 4px 2px;
-      cursor: pointer;
-      border: none;
-      border-radius: 4px; /* Optional: adds rounded corners */
-    grid-template-rows: 33% 33% 33%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu a {
+  font-size: 24px;
+  color: black; 
+  margin: 15px 0;
+}
+
+/* .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+} */

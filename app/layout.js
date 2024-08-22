@@ -1,9 +1,11 @@
 import { Aleo } from "next/font/google";
-import Header from "./src/components/header/header";
-import "./globals.css";  // Import global CSS directly, no need to assign it to a variable
+import "./globals.css";  // Import global CSS directly
 
+//Import header and footer to be applied globally
+import Header from "./src/components/header/header";
 import Footer from "./src/components/Footer/Footer";
 
+//Import font
 const aleo = Aleo({ subsets: ["latin"] });
 
 export const metadata = {
