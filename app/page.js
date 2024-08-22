@@ -1,7 +1,7 @@
 import "./page.css";
 import "./globals.css"
 import Hero from "./src/components/Hero/hero";
-// import HowItWorks from "@/public/Image/HowItWorks/HowItWorksImage";
+
 import HowItWorksImages from "./src/components/HowItWorksComponents.module.css/howitworks";
 
 import Reviews from "./src/components/reviews/reviews";

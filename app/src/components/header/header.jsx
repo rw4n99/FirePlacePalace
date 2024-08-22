@@ -5,6 +5,8 @@ import styles from './header.module.css';
 import {useState} from "react"
 import Link from 'next/link';
 
+import MenuButton from './MenuButton'
+
 export default function Header() {
   const [menu, setMenu] = useState(false)
 
@@ -16,9 +18,11 @@ export default function Header() {
   return (
     <header className={styles.container}>
       <h1 className={styles.header}>🔥 Fireplace Palace</h1>
-      <button className={styles.menuButton} onClick={handleClick}>
+      <MenuButton 
+        src='/OpenMenu.png' 
+        alt='Open Menu' 
+        onClick={handleClick}/>
         {menu ? "Close the menu" : "Open the menu"}
-      </button>
       {menu && ( 
         <div className={styles.menu}>
           <ul>

@@ -1,12 +1,18 @@
 .container {
   display: flex;
   background-color: blue;
+  align-items: center;
 }
 
-.menuButton {
+.MenuButton{
+  flex-direction: row-reverse;
+}
+
+
+/* .menuButton {
   background-color: #ffc0cb;
 
-}
+} */
 
 .header {
   font-size: 170%;
