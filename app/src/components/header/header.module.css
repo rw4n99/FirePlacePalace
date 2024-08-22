@@ -1,3 +1,7 @@
+.container {
+  background-color: blue;
+}
+
 .header {
     text-align: center;
     padding: 10px 0;
@@ -38,7 +42,6 @@
       text-decoration: none;
       display: inline-block;
       font-size: 16px; 
-      font-color: white;/* Larger font size */
       margin: 4px 2px;
       cursor: pointer;
       border: none;

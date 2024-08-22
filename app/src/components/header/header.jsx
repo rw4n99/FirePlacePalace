@@ -14,6 +14,7 @@ export default function Header() {
   }
 
   return (
+    <section className="container">
     <header>
       <button onClick={handleClick}>
         {menu ? "Close the menu" : "Open the menu"}
@@ -32,6 +33,7 @@ export default function Header() {
         <h1 className={styles.header}>🔥Fireplace Palace</h1>
       </div>
     </header>
+    </section>
   );
 }
 

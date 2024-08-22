@@ -1,85 +1,120 @@
 "use client";
 
-import { useState } from "react";
-import React, { useReducer } from 'react';
+import { useReducer } from "react";
 import styles from './ContactForm.module.css'
 
+// Initial state for the form
+const initialState = {
+  name: "",
+  postcode: "",
+  streetName: "",
+  city: "",
+  phoneNumber: "",
+  email: "",
+  error: false,
+  success: false,
+};
 
-export default function ContactForm() {
-  const initialState = {
-    data: {
-        name: '',
-      },
-      errorStatus: false
-  };
-}
-
-
-function reducer(state, action)
-switch (action.type) {
-  case "CHANGE_FORM_DATA":
-    // Make a copy of current state
-    let newState = {...state};
-    // grab the data out of your action's payload
-    const fieldName = action.payload.name;
-    const newFieldValue = action.payload.value;
-    // update the newState with the changed data
-    newState.data[fieldName] = newFieldValue;
-    // return new state :fire::rocket:
-    return newState;
-    // dont forget your breaks - important
-    break;
-  default:
-    return state;
-
-function handleFormFieldChange(event) {
-	if (event.target.name === "name") {
-    	dispatch({
-          type: "CHANGE_FORM_DATA",
-          payload: {
-            name: event.target.name, // name of field
-            value: event.target.value // new value
-          }
-        });
-    }
-}
-
-function reducer(state, action) {
-  ... reducer code
-}
-}
-
-function ContactForm() {
-  const [ state, dispatch ] = useReducer(reducer, initialState);
-  ... your existing code
-	
-  return {
-    	... your jsx
+// Reducer function to manage form state
+function formReducer(state, action) {
+  switch (action.type) {
+    case "UPDATE_FIELD":
+      return {
+        ...state,
+        [action.field]: action.value,
+      };
+    case "SET_ERROR":
+      return {
+        ...state,
+        error: action.value,
+      };
+    case "SET_SUCCESS":
+      return {
+        ...state,
+        success: action.value,
+      };
+    case "RESET_FORM":
+      return initialState;
+    default:
+      return state;
   }
 }
 
+export default function ContactForm() {
+  const [state, dispatch] = useReducer(formReducer, initialState);
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   if (!name || !postcode || !streetName || !city || !phoneNumber || !Email){
-  //       setError(true);
-  //       setSuccess(false)
-  //       return;
-  //   }
-  //   if (name || postcode || streetName || city || phoneNumber || Email)
-  //       console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, Email });
-  //       setError(false);
-  //       setSuccess(true);
-  //       return;
-  // }
-  return(
+  function handleChange(event) {
+    const { name, value } = event.target;
+    dispatch({ type: "UPDATE_FIELD", field: name, value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const { name, postcode, streetName, city, phoneNumber, email } = state;
+
+    // Check if all required fields are filled
+    if (!name || !postcode || !streetName || !city || !phoneNumber || !email) {
+      dispatch({ type: "SET_ERROR", value: true });
+      dispatch({ type: "SET_SUCCESS", value: false });
+      return;
+    }
+
+    console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, email });
+    dispatch({ type: "SET_ERROR", value: false });
+    dispatch({ type: "SET_SUCCESS", value: true });
+  }
+
+  return (
     <form onSubmit={handleSubmit}>
-        <legend className={styles.legend}>Personal information</legend>
-            <input className={styles.text} name='name' value={name} onChange={handleChange} placeholder="Name" />
-           
-    <button className={styles.button}type="submit">Request Design Consultation</button>
-    <p className={styles.error}>{error && "Please complete all required fields"}</p>
-    <p className={styles.success}>{success && "Success! Your form has been submitted"}</p>
-  </form>
-  )
+      <legend className={styles.legend}>Personal information</legend>
+      <input
+        className={styles.text}
+        name="name"
+        value={state.name}
+        onChange={handleChange}
+        placeholder="Name"
+      />
+      <input
+        className={styles.text}
+        name="postcode"
+        value={state.postcode}
+        onChange={handleChange}
+        placeholder="Postcode"
+      />
+      <input
+        className={styles.text}
+        name="streetName"
+        value={state.streetName}
+        onChange={handleChange}
+        placeholder="Street Name"
+      />
+      <input
+        className={styles.text}
+        name="city"
+        value={state.city}
+        onChange={handleChange}
+        placeholder="City"
+      />
+
+      <legend className={styles.legend}>Contact Information</legend>
+      <input
+        className={styles.text}
+        name="phoneNumber"
+        value={state.phoneNumber}
+        onChange={handleChange}
+        placeholder="Phone Number"
+      />
+      <input
+        className={styles.text}
+        name="email"
+        value={state.email}
+        onChange={handleChange}
+        placeholder="Email"
+      />
+
+      <button className={styles.button} type="submit">Request Design Consultation</button>
+      <p className={styles.error}>{state.error && "Please complete all required fields"}</p>
+      <p className={styles.success}>{state.success && "Success! Your form has been submitted"}</p>
+    </form>
+  );
 }
