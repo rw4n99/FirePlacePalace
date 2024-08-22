@@ -10,9 +10,8 @@ import MenuButton from './MenuButton'
 export default function Header() {
   const [menu, setMenu] = useState(false)
 
-  const handleClick = () =>{
+  const handleClick = () => {
     setMenu(!menu)
-    console.log(menu)
   }
 
   return (
@@ -32,9 +31,9 @@ export default function Header() {
     onClick={handleClick}
     className={styles.MenuButton}/>
       <ul>
-        <li className={styles.button}><Link href="/">Home</Link></li>
-        <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
-        <li className={styles.button}><Link href="/bookings">Bookings</Link></li>
+        <li className={styles.button} onClick={handleClick}><Link href="/">Home</Link></li>
+        <li className={styles.button} onClick={handleClick}><Link href="/founders">Meet the Founders</Link></li>
+        <li className={styles.button} onClick={handleClick}><Link href="/bookings">Bookings</Link></li>
       </ul>
     </div>
   )}
