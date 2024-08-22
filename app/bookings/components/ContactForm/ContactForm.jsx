@@ -67,8 +67,11 @@ export default function ContactForm() {
 
     console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, email });
     dispatch({ type: "SET_ERROR", value: false });
+    dispatch({ type: "SUBMIT_STARTED", value: true});     
+    setTimeout(() => {
     dispatch({ type: "SET_SUCCESS", value: true });
-    dispatch({ type: "SUBMIT_STARTED", value: true})
+    }, 2000);
+    dispatch({ type: "SUBMIT_STARTED", value: false });
   }
 
   return (
@@ -120,9 +123,9 @@ export default function ContactForm() {
       />
 
       <button className={styles.button} type="submit">Request Design Consultation</button>
-      <p className={styles.error}>{state.error && "Please complete all required fields"}</p>
-      <p className={styles.success}>{state.success && "Success! Your form has been submitted"}</p>
-      <p className={styles.success}>{state.loading && "Your submission is loading..."}</p>
+      <p className={styles.error}>{state.error && "Please complete all required fields."}</p>
+      <p className={styles.success}>{state.success && "Success! Your form has been submitted. An agent will get back to you in 1-2 working days"}</p>
+      <p className={styles.success}>{state.loading && "Your form is sending..."}</p>
     </form>
   );
 }
