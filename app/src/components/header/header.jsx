@@ -16,24 +16,26 @@ export default function Header() {
   }
 
   return (
-    <header className={styles.container}>
-      <h1 className={styles.header}>🔥 Fireplace Palace</h1>
-      <MenuButton 
-        src='/OpenMenu.png' 
-        alt='Open Menu' 
-        onClick={handleClick}/>
-        {menu ? "Close the menu" : "Open the menu"}
-      {menu && ( 
-        <div className={styles.menu}>
-          <ul>
-            <li className={styles.button}><Link href="/">Home</Link></li>
-            <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
-            <li className={styles.button}><Link href="/bookings">Bookings</Link></li>
-            {/* Add more links as needed */}
-          </ul>
-        </div>
-      )}
-    </header>
+<header className={styles.container}>
+  <h1 className={styles.header}>🔥 Fireplace Palace</h1>
+  <MenuButton 
+    src='/OpenMenu.png' 
+    alt='Open Menu' 
+    onClick={handleClick}
+    className={styles.MenuButton}
+  />
+  {menu && ( 
+    <div className={styles.menu}>
+      <ul>
+        <li className={styles.button}><Link href="/">Home</Link></li>
+        <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
+        <li className={styles.button}><Link href="/bookings">Bookings</Link></li>
+        {/* Add more links as needed */}
+      </ul>
+    </div>
+  )}
+</header>
+
   );
 }
 

@@ -1,12 +1,3 @@
- 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f2f2f2; /* Adjust background color */
-}
-
 .Title {
     display: flex;
     height: 100px;

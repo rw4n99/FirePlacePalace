@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import styles from '../header/header.module.css'
-
-export default function MenuButton({src, alt}) {
+import styles from './header.module.css'
+const MenuButton = ({ src, alt, onClick }) => {
     return (
-        <div>
-        <Image className={styles.MenuButton}
-            height={50}
-            width={50}
-            src={src}
-            alt={alt}
-        />            
-        </div>
-    )
-}
+      <img className={styles.MenuButton}
+        width={50}
+        height={50}
+        src={src} 
+        alt={alt} 
+        onClick={onClick} 
+        style={{ cursor: 'pointer' }}
+      />
+    );
+  };
+  
+  export default MenuButton;
