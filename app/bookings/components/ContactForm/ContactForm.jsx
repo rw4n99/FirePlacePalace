@@ -13,11 +13,17 @@ const initialState = {
   email: "",
   error: false,
   success: false,
+  loading: false
 };
 
 // Reducer function to manage form state
 function formReducer(state, action) {
   switch (action.type) {
+    case "SUBMIT_STARTED":
+      return {
+        ...state,
+        loading: true,
+      };
     case "UPDATE_FIELD":
       return {
         ...state,
@@ -62,6 +68,7 @@ export default function ContactForm() {
     console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, email });
     dispatch({ type: "SET_ERROR", value: false });
     dispatch({ type: "SET_SUCCESS", value: true });
+    dispatch({ type: "SUBMIT_STARTED", value: true})
   }
 
   return (
@@ -115,6 +122,7 @@ export default function ContactForm() {
       <button className={styles.button} type="submit">Request Design Consultation</button>
       <p className={styles.error}>{state.error && "Please complete all required fields"}</p>
       <p className={styles.success}>{state.success && "Success! Your form has been submitted"}</p>
+      <p className={styles.success}>{state.loading && "Your submission is loading..."}</p>
     </form>
   );
 }

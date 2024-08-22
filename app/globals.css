@@ -14,3 +14,15 @@ body {
   text-align: center;
   background-color: #f2f2f2;
 }
+
+/* @media (min-width: 768px) {
+  .item {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    width: calc(50% - 1rem);
+  }
+} */
