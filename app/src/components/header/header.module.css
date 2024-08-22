@@ -7,7 +7,7 @@
 }
 
 .MenuButton {
-  position: absolute; /* Absolute positioning */
+  position: absolute;
   bottom: 15%;
   right: 0;
   padding: 10px;

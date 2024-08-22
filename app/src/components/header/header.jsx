@@ -18,7 +18,7 @@ export default function Header() {
   return (
 <header className={styles.container}>
   <h1 className={styles.header}>🔥 Fireplace Palace</h1>
-  <MenuButton 
+    <MenuButton 
     src='/OpenMenu.png' 
     alt='Open Menu' 
     onClick={handleClick}
@@ -26,11 +26,15 @@ export default function Header() {
   />
   {menu && ( 
     <div className={styles.menu}>
+      <MenuButton 
+    src='/CloseMenu.png' 
+    alt='Close Menu' 
+    onClick={handleClick}
+    className={styles.MenuButton}/>
       <ul>
         <li className={styles.button}><Link href="/">Home</Link></li>
         <li className={styles.button}><Link href="/founders">Meet the Founders</Link></li>
         <li className={styles.button}><Link href="/bookings">Bookings</Link></li>
-        {/* Add more links as needed */}
       </ul>
     </div>
   )}
