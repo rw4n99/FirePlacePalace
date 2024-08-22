@@ -1,5 +1,5 @@
 import React from "react";
-import HowItWorks from "@/public/Image/howitworks/howitworks";
+import HowItWorks from "@/app/src/components/HowItWorksComponents.module.css/howitworks";
 
 function FoundersPage(){
 return(
