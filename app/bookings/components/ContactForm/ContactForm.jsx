@@ -19,11 +19,16 @@ const initialState = {
 // Reducer function to manage form state
 function formReducer(state, action) {
   switch (action.type) {
-    case "SUBMIT_STARTED":
+    case "SUBMIT_STATUS":
       return {
         ...state,
-        loading: true,
+        loading: action.value,
       };
+    case "SUBMIT_FINISHED":
+      return {
+        ...state,
+        loading: false,
+      }
     case "UPDATE_FIELD":
       return {
         ...state,
@@ -67,13 +72,14 @@ export default function ContactForm() {
 
     console.log("Form submitted with:", { name, postcode, streetName, city, phoneNumber, email });
     dispatch({ type: "SET_ERROR", value: false });
-    dispatch({ type: "SUBMIT_STARTED", value: true});     
+    dispatch({ type: "SUBMIT_STATUS", value: true});     
     setTimeout(() => {
+    dispatch({ type: "SUBMIT_STATUS", value: false });
     dispatch({ type: "SET_SUCCESS", value: true });
     }, 2000);
-    dispatch({ type: "SUBMIT_STARTED", value: false });
-  }
 
+  }
+console.log(state)
   return (
     <form onSubmit={handleSubmit}>
       <legend className={styles.legend}>Personal information</legend>
