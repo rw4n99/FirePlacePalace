@@ -21,19 +21,19 @@ return (
         </p1>
         <div className={styles.countryButtons}>
             <button
-                onClick={() => setCountry('england')}
+                onClick={() => country !== 'england' ? setCountry('england'): setCountry(null)}
                 className={`${ country === 'england' ? styles.selectedCountry : styles.countryButton}`}
             >
                 England
             </button>
             <button
-                onClick={() => setCountry('wales')}
+                onClick={() => country !== 'wales' ? setCountry('wales'): setCountry(null)}
                 className={`${ country === 'wales' ? styles.selectedCountry : styles.countryButton}`}
             >
                 Wales
             </button>
             <button
-                onClick={() => setCountry('scotland')}
+                onClick={() => country !== 'scotland' ? setCountry('scotland'): setCountry(null)}
                 className={`${ country === 'scotland' ? styles.selectedCountry : styles.countryButton}`}
             >
                 Scotland
@@ -46,7 +46,6 @@ return (
                     <p>{reviews.author} - {reviews.location}</p>
                 </>
             )}
-            
         </section>
     </div>
 );
