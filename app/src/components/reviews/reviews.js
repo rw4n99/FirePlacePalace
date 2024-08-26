@@ -40,8 +40,13 @@ return (
             </button>
         </div>
         <section className={`${ country === null ? styles.reviewWrapperFalse : styles.reviewWrapper}`}>
-            <p className={styles.review}>{reviews.text}</p>
-            <p className={styles.info}>{reviews.author} - {reviews.location}</p>
+            {country !== null && (
+                <>
+                    <p>" {reviews.text} "</p>
+                    <p>{reviews.author} - {reviews.location}</p>
+                </>
+            )}
+            
         </section>
     </div>
 );
