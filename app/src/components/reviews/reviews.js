@@ -1,54 +1,48 @@
-"use client";
+'use client'
 
-import React, { useState } from 'react';
-import styles from './reviews.module.css'; // Ensure this file exists and is correctly linked
+import React, {useState, useEffect} from "react"
+import styles from './reviews.module.css'
 
-const Reviews = () => {
-    const [selectedCountry, setSelectedCountry] = useState(null);
-    const [review, setReview] = useState(null); // Add state to store the review data
+export default function Reviews () {
+    const [reviews, setReviews] = useState([]);
+    const [country, setCountry] = useState(null);
 
-    const handleCountryClick = async (country) => {
-        setSelectedCountry(country);
-        try {
-            const response = await fetch(`https://seal-app-336e8.ondigitalocean.app/reviews?country=${country}`);
-            const data = await response.json();
-            setReview(data); // Save the fetched data in the state
-        } catch (error) {
-            console.error("Error fetching reviews:", error);
-            // Handle the error state here
-        }
-    };
+    useEffect(() => {
+        fetch(`https://seal-app-336e8.ondigitalocean.app/reviews?country=${country}`)
+            .then(response => response.json())
+            .then(json => setReviews(json))        
+    }, [country])
 
-    return (
-        <div className={styles.reviewContainer}>
-            <div className={styles.countryButtons}>
-                <button
-                    className={`${styles.countryButton} ${selectedCountry === 'england' ? styles.selectedCountry : ''}`}
-                    onClick={() => handleCountryClick('england')}
-                >
-                    England
-                </button>
-                <button
-                    className={`${styles.countryButton} ${selectedCountry === 'wales' ? styles.selectedCountry : ''}`}
-                    onClick={() => handleCountryClick('wales')}
-                >
-                    Wales
-                </button>
-                <button
-                    className={`${styles.countryButton} ${selectedCountry === 'scotland' ? styles.selectedCountry : ''}`}
-                    onClick={() => handleCountryClick('scotland')}
-                >
-                    Scotland
-                </button>
-            </div>
-            {review && (
-                <div className={styles.reviewDisplay}>
-                    <p>{review.text}</p>
-                    <p>- {review.author}, {review.location}</p>
-                </div>
-            )}
+return (
+    <div className={styles.reviewContainer}>
+        <header className={styles.header}>Trusted.</header>
+        <p1 className={styles.text}>
+            We've got thousands of happy customers all over the UK. Choose your Country to see the latest review:
+        </p1>
+        <div className={styles.countryButtons}>
+            <button
+                onClick={() => setCountry('england')}
+                className={`${ country === 'england' ? styles.selectedCountry : styles.countryButton}`}
+            >
+                England
+            </button>
+            <button
+                onClick={() => setCountry('wales')}
+                className={`${ country === 'wales' ? styles.selectedCountry : styles.countryButton}`}
+            >
+                Wales
+            </button>
+            <button
+                onClick={() => setCountry('scotland')}
+                className={`${ country === 'scotland' ? styles.selectedCountry : styles.countryButton}`}
+            >
+                Scotland
+            </button>
         </div>
-    );
-};
-
-export default Reviews;
+        <section className={styles.reviewWrapper}>
+            <p className={styles.review}>" {reviews.text} "</p>
+            <p className={styles.info}>{reviews.author} - {reviews.location}</p>
+        </section>
+    </div>
+);
+}

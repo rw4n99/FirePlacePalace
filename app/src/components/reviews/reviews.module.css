@@ -1,9 +1,18 @@
+.header {
+  font-size: xx-large;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  border-bottom: solid;
+  border-color: rgb(183, 179, 179);
+}
 
 .countryButtons {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px; /* Add space below the buttons */
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
+
 .countryButton {
   background-color: grey;
   color: white;
@@ -11,13 +20,20 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.countryButton:hover {
-  background-color: darkgrey;
 }
 .selectedCountry {
-  border-radius: 8px;
-  background-color: rgb(126, 127, 189); /* Orange color when selected */
+  background-color: rgb(126, 127, 189);
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reviewWrapper {
+  color: white;
+  padding: 1%;
+  background-color: rgb(126, 127, 189);
+  border-radius: 10px;
+  margin-bottom: 3%;
 }

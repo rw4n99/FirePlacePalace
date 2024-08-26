@@ -18,3 +18,4 @@ function HowItWorksImages ({src, alt, header, text}) {
 }
 
 export default HowItWorksImages;
+
