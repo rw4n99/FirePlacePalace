@@ -39,8 +39,8 @@ return (
                 Scotland
             </button>
         </div>
-        <section className={styles.reviewWrapper}>
-            <p className={styles.review}>" {reviews.text} "</p>
+        <section className={`${ country === null ? styles.reviewWrapperFalse : styles.reviewWrapper}`}>
+            <p className={styles.review}>{reviews.text}</p>
             <p className={styles.info}>{reviews.author} - {reviews.location}</p>
         </section>
     </div>
